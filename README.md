@@ -2,5 +2,5 @@
 ## Bus Reservation System Portal
 
 
-### ER Daigram
-<hr/>
+- ### ER Daigram:
+<img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/ER_diagram.png" />
