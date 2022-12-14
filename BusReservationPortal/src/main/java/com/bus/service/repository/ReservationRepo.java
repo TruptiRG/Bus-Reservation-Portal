@@ -1,4 +1,4 @@
-package com.bus.repository;
+package com.bus.service.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
