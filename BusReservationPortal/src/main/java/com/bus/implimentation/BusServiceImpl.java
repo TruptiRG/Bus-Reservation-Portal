@@ -7,14 +7,14 @@ import org.springframework.stereotype.Service;
 
 import com.bus.exception.BusException;
 import com.bus.model.Bus;
+import com.bus.repository.BusRepo;
 import com.bus.service.BusService;
-import com.bus.service.repository.BusRepository;
 
 @Service
 public class BusServiceImpl implements BusService{
 	
 	@Autowired
-	private BusRepository busrepo;
+	private BusRepo busrepo;
 
 	@Override
 	public Bus addBus(Bus bus) throws BusException {
