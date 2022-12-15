@@ -1,4 +1,4 @@
-package com.bus.service;
+package com.bus.implimentation;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.bus.exception.BusException;
 import com.bus.model.Bus;
+import com.bus.service.BusService;
 import com.bus.service.repository.BusRepository;
 
 @Service
