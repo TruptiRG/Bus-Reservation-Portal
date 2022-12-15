@@ -67,4 +67,15 @@ public class GlobalExceptionHandler {
 		error.setDescription(req.getDescription(false));
 		return new ResponseEntity<MyErrorDetails>(error,HttpStatus.BAD_REQUEST);
 	}
+	
+	public ResponseEntity<MyErrorDetails> FeedbackException(FeedbackException feedback,WebRequest req){
+		MyErrorDetails error = new MyErrorDetails();
+
+		error.setTime(LocalDateTime.now());
+		error.setMessage(feedback.getMessage());
+		error.setDescription(req.getDescription(false));
+		return new ResponseEntity<MyErrorDetails>(error,HttpStatus.BAD_REQUEST);
+	}
+	
+	
 }
