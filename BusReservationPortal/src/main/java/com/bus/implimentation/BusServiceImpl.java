@@ -18,7 +18,7 @@ public class BusServiceImpl implements BusService{
 
 	@Override
 	public Bus addBus(Bus bus) throws BusException {
-		return null;
+		return bus;
 		
 	}
 
