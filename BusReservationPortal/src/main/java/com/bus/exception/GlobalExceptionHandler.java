@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
+import com.bus.model.Reservation;
+
 @ControllerAdvice
 public class GlobalExceptionHandler {
 	
@@ -64,6 +66,14 @@ public class GlobalExceptionHandler {
 
 		error.setTime(LocalDateTime.now());
 		error.setMessage(user.getMessage());
+		error.setDescription(req.getDescription(false));
+		return new ResponseEntity<MyErrorDetails>(error,HttpStatus.BAD_REQUEST);
+	}
+	
+	public ResponseEntity<MyErrorDetails> ReservationException(ReservationException reservation, WebRequest req){
+		MyErrorDetails error = new MyErrorDetails();
+		error.setTime(LocalDateTime.now());
+		error.setMessage(reservation.getMessage());
 		error.setDescription(req.getDescription(false));
 		return new ResponseEntity<MyErrorDetails>(error,HttpStatus.BAD_REQUEST);
 	}

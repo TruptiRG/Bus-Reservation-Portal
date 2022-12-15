@@ -2,17 +2,31 @@ package com.bus.implimentation;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.bus.exception.ReservationException;
+import com.bus.model.Bus;
 import com.bus.model.Reservation;
+import com.bus.model.Route;
+import com.bus.model.User;
+import com.bus.repository.ReservationRepo;
 import com.bus.service.ReservationService;
 
+@Service
 public class ReservationServiceIMPL implements ReservationService{
+	
+	@Autowired
+	private ReservationRepo rRepo;
 
 	@Override
 	public Reservation addReservation(Reservation reservation) throws ReservationException {
 		// TODO Auto-generated method stub
-		return null;
+				
+		Reservation addReservation = rRepo.save(reservation); 
+		return addReservation;
 	}
 
 	@Override

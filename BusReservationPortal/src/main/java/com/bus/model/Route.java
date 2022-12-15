@@ -1,5 +1,6 @@
 package com.bus.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -42,7 +43,7 @@ public class Route {
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JsonIgnore
-	private Set<Bus> busList=new HashSet<>();
+	private List<Bus> busList=new ArrayList<>();
 	
 	
 	
