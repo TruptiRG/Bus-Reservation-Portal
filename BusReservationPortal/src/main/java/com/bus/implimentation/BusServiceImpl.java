@@ -18,7 +18,9 @@ public class BusServiceImpl implements BusService{
 
 	@Override
 	public Bus addBus(Bus bus) throws BusException {
-		return null;
+		
+		Bus addbus = busrepo.save(bus);
+		return addbus;
 	}
 
 	@Override
