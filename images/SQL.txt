@@ -1,0 +1,106 @@
+ysql> create database bus_reservation_portal;
+Query OK, 1 row affected (0.56 sec)
+
+mysql> use bus_reservation_portal;
+Database changed
+mysql> show tables;
++----------------------------------+
+| Tables_in_bus_reservation_portal |
++----------------------------------+
+| bus                              |
+| feedback                         |
+| hibernate_sequence               |
+| reservation                      |
+| route                            |
+| route_bus_list                   |
+| user                             |
++----------------------------------+
+7 rows in set (0.04 sec)
+
+mysql> desc bus;
++-----------------+--------------+------+-----+---------+-------+
+| Field           | Type         | Null | Key | Default | Extra |
++-----------------+--------------+------+-----+---------+-------+
+| bus_id          | int          | NO   | PRI | NULL    |       |
+| arrival_time    | varchar(255) | YES  |     | NULL    |       |
+| available_seats | int          | YES  |     | NULL    |       |
+| bus_name        | varchar(255) | YES  |     | NULL    |       |
+| bus_type        | varchar(255) | YES  |     | NULL    |       |
+| departure_time  | varchar(255) | YES  |     | NULL    |       |
+| route_from      | varchar(255) | YES  |     | NULL    |       |
+| route_to        | varchar(255) | YES  |     | NULL    |       |
+| seats           | int          | YES  |     | NULL    |       |
++-----------------+--------------+------+-----+---------+-------+
+9 rows in set (0.30 sec)
+
+mysql> desc feedback;
++--------------------+--------------+------+-----+---------+-------+
+| Field              | Type         | Null | Key | Default | Extra |
++--------------------+--------------+------+-----+---------+-------+
+| feedbackid         | int          | NO   | PRI | NULL    |       |
+| overall_rating     | int          | YES  |     | NULL    |       |
+| service_rating     | int          | YES  |     | NULL    |       |
+| comment            | varchar(255) | YES  |     | NULL    |       |
+| driver_rating      | int          | YES  |     | NULL    |       |
+| feedbackdate       | datetime(6)  | YES  |     | NULL    |       |
+| bus_bus_id         | int          | YES  | MUL | NULL    |       |
+| user_user_login_id | int          | YES  | MUL | NULL    |       |
++--------------------+--------------+------+-----+---------+-------+
+8 rows in set (0.11 sec)
+
+mysql> desc route;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| route_id   | int          | NO   | PRI | NULL    |       |
+| distance   | int          | YES  |     | NULL    |       |
+| route_from | varchar(255) | YES  |     | NULL    |       |
+| route_to   | varchar(255) | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> desc reservation;
++--------------------+--------------+------+-----+---------+-------+
+| Field              | Type         | Null | Key | Default | Extra |
++--------------------+--------------+------+-----+---------+-------+
+| reservation_id     | int          | NO   | PRI | NULL    |       |
+| destination        | varchar(255) | YES  |     | NULL    |       |
+| reservation_date   | date         | YES  |     | NULL    |       |
+| reservation_status | varchar(255) | YES  |     | NULL    |       |
+| reservation_time   | time         | YES  |     | NULL    |       |
+| reservation_type   | varchar(255) | YES  |     | NULL    |       |
+| source             | varchar(255) | YES  |     | NULL    |       |
++--------------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> desc user;
++----------------------------+--------------+------+-----+---------+-------+
+| Field                      | Type         | Null | Key | Default | Extra |
++----------------------------+--------------+------+-----+---------+-------+
+| user_login_id              | int          | NO   | PRI | NULL    |       |
+| contact                    | bigint       | YES  |     | NULL    |       |
+| email                      | varchar(255) | YES  |     | NULL    |       |
+| first_name                 | varchar(255) | YES  |     | NULL    |       |
+| last_name                  | varchar(255) | YES  |     | NULL    |       |
+| password                   | varchar(10)  | YES  |     | NULL    |       |
+| user_name                  | varchar(255) | YES  |     | NULL    |       |
+| reservation_reservation_id | int          | YES  | MUL | NULL    |       |
++----------------------------+--------------+------+-----+---------+-------+
+8 rows in set (0.31 sec)
+
+mysql> desc route_bus_list;
++-----------------+------+------+-----+---------+-------+
+| Field           | Type | Null | Key | Default | Extra |
++-----------------+------+------+-----+---------+-------+
+| route_route_id  | int  | NO   | PRI | NULL    |       |
+| bus_list_bus_id | int  | NO   | PRI | NULL    |       |
++-----------------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc hibernate_sequence;
++----------+--------+------+-----+---------+-------+
+| Field    | Type   | Null | Key | Default | Extra |
++----------+--------+------+-----+---------+-------+
+| next_val | bigint | YES  |     | NULL    |       |
++----------+--------+------+-----+---------+-------+
+1 row in set (0.00 sec)
