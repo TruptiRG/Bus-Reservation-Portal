@@ -1,11 +1,19 @@
 package com.bus.model;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -17,6 +25,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
+@EqualsAndHashCode
 public class Route {
 
 	@Id
@@ -29,6 +38,8 @@ public class Route {
 	
 	private Integer distance;
 	
+	@OneToMany(cascade = CascadeType.ALL)
+	private Set<Bus> busList=new HashSet<>();
 	
 	
 	

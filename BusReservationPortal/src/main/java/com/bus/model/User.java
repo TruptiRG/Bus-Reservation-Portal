@@ -5,10 +5,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
@@ -38,5 +40,8 @@ public class User {
 
     @Email(message = "Please Enter valid EmailId")
     private String email;
+    
+    @OneToOne(cascade = CascadeType.ALL)
+    private Reservation reservation;
 
 }

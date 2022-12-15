@@ -26,5 +26,7 @@ public class Bus {
 	private String departureTime;
 	private Integer seats;
 	private Integer availableSeats;
+	
+	
 
 }
