@@ -32,19 +32,6 @@ public class Bus {
 	private Integer availableSeats;
 	
 	
-	public Bus(Integer busId, String busName, String busType, String routeFrom, String routeTo, LocalTime arrivalTime,
-			LocalTime departureTime, Integer seats, Integer availableSeats) {
-		super();
-		this.busId = busId;
-		this.busName = busName;
-		this.busType = busType;
-		this.routeFrom = routeFrom;
-		this.routeTo = routeTo;
-		this.arrivalTime = arrivalTime;
-		this.departureTime = departureTime;
-		this.seats = seats;
-		this.availableSeats = availableSeats;
-	}
 
 
 	public Bus() {	
