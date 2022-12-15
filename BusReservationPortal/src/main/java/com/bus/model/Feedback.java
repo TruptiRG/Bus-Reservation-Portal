@@ -5,10 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
 import java.time.LocalDateTime;
 
 @Data
@@ -25,8 +28,12 @@ public class Feedback {
     private Integer OverallRating;
     private String comment;
     private LocalDateTime feedbackdate;
-//    private  User user;
-//    private  Bus bus;
+    
+    @OneToOne
+    private  User user;
+    
+    @OneToOne
+    private  Bus bus;
 
 
 }
