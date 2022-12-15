@@ -42,7 +42,6 @@ public class User {
     private String email;
     
     @OneToOne(cascade = CascadeType.ALL)
-
     private Reservation reservation;
 
 }
