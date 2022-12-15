@@ -1,5 +1,8 @@
 package com.bus.model;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,8 +25,8 @@ public class Bus {
 	private String busType;
 	private String routeFrom;
 	private String routeTo;
-	private String arrivalTime;
-	private String departureTime;
+	private LocalTime arrivalTime;
+	private LocalTime departureTime;
 	private Integer seats;
 	private Integer availableSeats;
 
