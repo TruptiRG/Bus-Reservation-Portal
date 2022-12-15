@@ -69,7 +69,6 @@ public class GlobalExceptionHandler {
 		error.setDescription(req.getDescription(false));
 		return new ResponseEntity<MyErrorDetails>(error,HttpStatus.BAD_REQUEST);
 	}
-<<<<<<< HEAD
 	
 	public ResponseEntity<MyErrorDetails> ReservationException(ReservationException reservation, WebRequest req){
 		MyErrorDetails error = new MyErrorDetails();
@@ -78,7 +77,6 @@ public class GlobalExceptionHandler {
 		error.setDescription(req.getDescription(false));
 		return new ResponseEntity<MyErrorDetails>(error,HttpStatus.BAD_REQUEST);
 	}
-=======
 
 	
 	public ResponseEntity<MyErrorDetails> FeedbackException(FeedbackException feedback,WebRequest req){
@@ -100,5 +98,4 @@ public ResponseEntity<MyErrorDetails> LoginException(LoginException login,WebReq
 		return new ResponseEntity<MyErrorDetails>(error,HttpStatus.BAD_REQUEST);
 	}
 
->>>>>>> cea1a87599ed821b32f328388fa537c44b190e37
 }
