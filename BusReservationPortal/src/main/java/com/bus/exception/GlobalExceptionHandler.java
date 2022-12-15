@@ -58,4 +58,13 @@ public class GlobalExceptionHandler {
 		error.setDescription(req.getDescription(false));
 		return new ResponseEntity<MyErrorDetails>(error,HttpStatus.BAD_REQUEST);
 	}
+
+	public ResponseEntity<MyErrorDetails> UserException(UserException user,WebRequest req){
+		MyErrorDetails error = new MyErrorDetails();
+
+		error.setTime(LocalDateTime.now());
+		error.setMessage(user.getMessage());
+		error.setDescription(req.getDescription(false));
+		return new ResponseEntity<MyErrorDetails>(error,HttpStatus.BAD_REQUEST);
+	}
 }
