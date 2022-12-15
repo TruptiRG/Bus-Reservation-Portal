@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,7 +26,7 @@ public class Reservation {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer resevationId;
+	private Integer reservationId;
 	private String reservationStatus;
 	private String reservationType;
 	private LocalDate reservationDate;
@@ -33,7 +34,8 @@ public class Reservation {
 	private String source;
 	private String destination;
 	
-	@OneToOne(cascade = CascadeType.ALL, mappedBy = "busList")
+	@OneToOne(cascade = CascadeType.ALL)
+	@PrimaryKeyJoinColumn
 	private Bus bus;
 	
 
