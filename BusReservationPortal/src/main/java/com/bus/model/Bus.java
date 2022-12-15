@@ -15,9 +15,10 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class Bus {
+	private static final LocalTime LocalTime = null;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer busId;
@@ -31,5 +32,27 @@ public class Bus {
 	private Integer availableSeats;
 	
 	
+	public Bus(Integer busId, String busName, String busType, String routeFrom, String routeTo, LocalTime arrivalTime,
+			LocalTime departureTime, Integer seats, Integer availableSeats) {
+		super();
+		this.busId = busId;
+		this.busName = busName;
+		this.busType = busType;
+		this.routeFrom = routeFrom;
+		this.routeTo = routeTo;
+		this.arrivalTime = arrivalTime;
+		this.departureTime = departureTime;
+		this.seats = seats;
+		this.availableSeats = availableSeats;
+	}
 
+
+	public Bus() {	
+		this.arrivalTime=LocalTime;
+		this.departureTime=LocalTime;
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
 }
