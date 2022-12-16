@@ -16,10 +16,9 @@ import javax.validation.constraints.Size;
 
 import java.time.LocalDateTime;
 
-@Data
+
 @NoArgsConstructor
-@AllArgsConstructor
-@ToString
+
 @Entity
 public class Feedback {
     @Id

@@ -41,7 +41,7 @@ public class User {
     @Email(message = "Please Enter valid EmailId")
     private String email;
     
-    @OneToOne
-    private Reservation reservation;
+//    @OneToOne
+//    private Reservation reservation;
 
 }

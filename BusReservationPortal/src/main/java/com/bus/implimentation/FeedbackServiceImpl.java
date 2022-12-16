@@ -1,21 +1,32 @@
 package com.bus.implimentation;
 
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.bus.exception.FeedbackException;
+
 import com.bus.model.Feedback;
+import com.bus.model.User;
+import com.bus.repository.FeedbackRepo;
 import com.bus.service.FeedbackService;
 
 
 @Service
 public class FeedbackServiceImpl implements FeedbackService{
 	
+	@Autowired
+	private User user;
+	
+	@Autowired
+	private FeedbackRepo fRepo;
 	
 	
 	@Override
 	public Feedback  addFeedBack(Feedback feedback) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return fRepo.save(feedback);
+	
 	}
 
 	
