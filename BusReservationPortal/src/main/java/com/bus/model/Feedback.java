@@ -41,7 +41,7 @@ public class Feedback {
     @NotNull(message = "Comment should not be Empty")
     private String comment;
     
-    private LocalDateTime feedbackdate;
+    private String feedbackdate;
     
     @OneToOne
     private  User user;

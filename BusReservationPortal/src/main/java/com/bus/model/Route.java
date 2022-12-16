@@ -28,7 +28,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
-@EqualsAndHashCode
 public class Route {
 
 	@Id
@@ -42,8 +41,5 @@ public class Route {
 	private Integer distance;
 	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL,mappedBy = "route")
-	private List<Bus> busList=new ArrayList<>();
-	
-	
-	
+	private List<Bus> busList;
 }
