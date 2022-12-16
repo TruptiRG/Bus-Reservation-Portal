@@ -47,9 +47,7 @@ public class Reservation {
 	@NotNull
 	private String destination;
 	
-	@OneToOne(cascade = CascadeType.ALL)
-	@PrimaryKeyJoinColumn
-	@Embedded
+	@OneToOne
 	private Bus bus;
 
 	public Reservation(Integer reservationId, @NotNull String reservationStatus, @NotNull String reservationType,
@@ -67,8 +65,8 @@ public class Reservation {
 	}
 	
 	public Reservation() {
-		this.reservationDate=LocalDate;
-		this.reservationTime=LocalTime;
+		this.reservationDate=LocalDate.now();
+		this.reservationTime=LocalTime.now();
 		
 	}
 	
