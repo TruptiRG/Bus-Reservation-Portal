@@ -29,57 +29,57 @@ public class BusServiceImpl implements BusService{
 		}	
 	}
 
-	@Override
-	public Bus updateBus(Bus bus) throws BusException {
-		Optional<Bus> opt = busrepo.findById(bus.getBusId());
-		if(opt.isPresent()) {
-			Bus updateBus = busrepo.save(bus);
-			
-			return updateBus;
-		} else {
-			throw new BusException("Invalid Bus Details");
-		}
-	}
+//	@Override
+//	public Bus updateBus(Bus bus) throws BusException {
+//		Optional<Bus> opt = busrepo.findById(bus.getBusId());
+//		if(opt.isPresent()) {
+//			Bus updateBus = busrepo.save(bus);
+//			
+//			return updateBus;
+//		} else {
+//			throw new BusException("Invalid Bus Details");
+//		}
+//	}
+//
+//	@Override
+//	public Bus deleteBus(Integer busId) throws BusException {
+//       Optional<Bus> opt = busrepo.findById(busId);
+//		
+//		if(opt.isPresent()) {
+//			Bus bus = opt.get();
+//			
+//			busrepo.delete(bus);
+//			return bus;
+//		} else {
+//			throw new BusException("Bus Not Found :"+busId);
+//		}
+//	}
+//
+//	@Override
+//	public Bus viewBus(Integer busId) throws BusException {
+//		return busrepo.findById(busId).orElseThrow(()-> new BusException());
+//	}
 
-	@Override
-	public Bus deleteBus(Integer busId) throws BusException {
-       Optional<Bus> opt = busrepo.findById(busId);
-		
-		if(opt.isPresent()) {
-			Bus bus = opt.get();
-			
-			busrepo.delete(bus);
-			return bus;
-		} else {
-			throw new BusException("Bus Not Found :"+busId);
-		}
-	}
-
-	@Override
-	public Bus viewBus(Integer busId) throws BusException {
-		return busrepo.findById(busId).orElseThrow(()-> new BusException());
-	}
-
-	@Override
-	public List<Bus> viewBusByType(String busType) throws BusException {
-		List<Bus> list = busrepo.viewBusByType(busType);
-		if(list.size()>0) {
-			return list;
-		}
-		throw new BusException("Bus Not Found With Given Type :"+busType);
-		
-	}
-
-	@Override
-	public List<Bus> viewAllBus() throws BusException {
-         List<Bus> bus = busrepo.findAll();
-		
-		if(bus.size()>0) {
-			return bus;
-		} else {
-			
-			throw new BusException("No Bus Found");
-		}
-	}
+//	@Override
+//	public List<Bus> viewBusByType(String busType) throws BusException {
+//		List<Bus> list = busrepo.viewBusByType(busType);
+//		if(list.size()>0) {
+//			return list;
+//		}
+//		throw new BusException("Bus Not Found With Given Type :"+busType);
+//		
+//	}
+//
+//	@Override
+//	public List<Bus> viewAllBus() throws BusException {
+//         List<Bus> bus = busrepo.findAll();
+//		
+//		if(bus.size()>0) {
+//			return bus;
+//		} else {
+//			
+//			throw new BusException("No Bus Found");
+//		}
+//	}
 
 }

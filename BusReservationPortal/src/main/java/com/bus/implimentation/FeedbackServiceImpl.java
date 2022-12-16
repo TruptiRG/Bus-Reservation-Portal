@@ -19,22 +19,22 @@ public class FeedbackServiceImpl implements FeedbackService{
 	}
 
 	
-	@Override
-	public Feedback updateFeedback(Feedback feedback) throws FeedbackException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Feedback viewFeedBack(Feedback feedback) throws FeedbackException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Feedback> viewAllFeedBack() throws FeedbackException {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	@Override
+//	public Feedback updateFeedback(Feedback feedback) throws FeedbackException {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public Feedback viewFeedBack(Feedback feedback) throws FeedbackException {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public List<Feedback> viewAllFeedBack() throws FeedbackException {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 }

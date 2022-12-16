@@ -12,6 +12,6 @@ import com.bus.model.Reservation;
 public interface ReservationRepo extends JpaRepository<Reservation, Integer>{
 	
 	public Reservation findByReservationId(Integer Id);
-	public List<Reservation> finfByLocalDate(LocalDate date);
+//	public List<Reservation> finfByLocalDate(LocalDate date);
 
 }
