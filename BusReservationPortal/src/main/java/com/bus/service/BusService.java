@@ -2,6 +2,8 @@ package com.bus.service;
 
 import java.util.List;
 
+import com.bus.exception.RoutExeception;
+import com.bus.model.Route;
 import org.springframework.stereotype.Service;
 
 import com.bus.exception.BusException;
@@ -15,4 +17,5 @@ public interface BusService {
 	public Bus viewBus(Integer busId) throws BusException;
 	public List<Bus> viewBusByType(String busType)throws BusException;
 	public List<Bus> viewAllBus()throws BusException;
+
 }
