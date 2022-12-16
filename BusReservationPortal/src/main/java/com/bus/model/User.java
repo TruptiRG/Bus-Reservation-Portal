@@ -41,7 +41,7 @@ public class User {
     @Email(message = "Please Enter valid EmailId")
     private String email;
     
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private Reservation reservation;
 
 }

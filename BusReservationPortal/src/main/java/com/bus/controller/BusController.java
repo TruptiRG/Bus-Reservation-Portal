@@ -18,7 +18,6 @@ import com.bus.exception.BusException;
 import com.bus.model.Bus;
 import com.bus.repository.BusRepo;
 import com.bus.service.BusService;
-
 @RestController
 @RequestMapping("/busservice")
 public class BusController {
