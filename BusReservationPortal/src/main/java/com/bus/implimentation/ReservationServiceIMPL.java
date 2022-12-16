@@ -2,6 +2,7 @@ package com.bus.implimentation;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,25 +39,52 @@ public class ReservationServiceIMPL implements ReservationService{
 	@Override
 	public Reservation deleteReservation(Integer reservationId) throws ReservationException {
 		// TODO Auto-generated method stub
-		return null;
+		Optional<Reservation> opt = Optional.of(rRepo.findByReservationId(reservationId));
+		if(opt.isPresent()) {
+			Reservation existingResevation = opt.get();
+			rRepo.delete(existingResevation);
+			return existingResevation;
+		}
+		else {
+			throw new ReservationException("Does not exist with ReservationId : "+reservationId);
+		}
 	}
 
 	@Override
 	public Reservation viewReservation(Integer reservationId) throws ReservationException {
 		// TODO Auto-generated method stub
-		return null;
+		Optional<Reservation> opt = Optional.of(rRepo.findByReservationId(reservationId));
+		if(opt.isPresent()) {
+			Reservation reservation = opt.get();
+			return reservation;
+		}
+		else {
+			throw new ReservationException("Not Found");
+		}
+//		return rRepo.findByReservationId(reservationId).orElseThrow(()-> new ReservationException("Not Found"));
 	}
 
 	@Override
 	public List<Reservation> viewAllReservation() throws ReservationException {
 		// TODO Auto-generated method stub
-		return null;
+		List<Reservation> resevations = rRepo.findAll();
+		if(resevations.size()==0) {
+			throw new ReservationException("Not Found");
+		}else
+			return resevations;
+		
 	}
 
 	@Override
 	public List<Reservation> getAllReservation(LocalDate date) throws ReservationException {
 		// TODO Auto-generated method stub
-		return null;
+		List<Reservation> resevations = rRepo.finfByLocalDate(date);
+		if(resevations.size()==0) {
+			throw new ReservationException("Not Found");
+		}else {
+			return resevations;
+		}
+		
 	}
 
 	
