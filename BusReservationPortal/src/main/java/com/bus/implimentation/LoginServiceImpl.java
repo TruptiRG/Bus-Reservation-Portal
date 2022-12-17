@@ -47,8 +47,8 @@ public class LoginServiceImpl implements LoginService {
         }
     }
 
-    @Override
-    public String logOutFromAccount(String key) throws LoginException {
-        return null;
-    }
+//    @Override
+//    public String logOutFromAccount(String key) throws LoginException {
+//        return null;
+//    }
 }

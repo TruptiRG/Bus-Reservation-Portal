@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,10 +16,9 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-//@NoArgsConstructor
-//@AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 public class Bus {
-	private static final LocalTime LocalTime = null;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer busId;
@@ -26,20 +26,11 @@ public class Bus {
 	private String busType;
 	private String routeFrom;
 	private String routeTo;
-	private LocalTime arrivalTime;
-	private LocalTime departureTime;
+	private String arrivalTime;
+	private String departureTime;
 	private Integer seats;
 	private Integer availableSeats;
-	
-	
-
-
-	public Bus() {	
-		this.arrivalTime=LocalTime;
-		this.departureTime=LocalTime;
-		// TODO Auto-generated constructor stub
-	}
-	
-	
+	@ManyToOne
+	private Route route;
 	
 }

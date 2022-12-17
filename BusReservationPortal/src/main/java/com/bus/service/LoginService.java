@@ -1,3 +1,4 @@
+
 package com.bus.service;
 
 import com.bus.model.LoginDTO;
@@ -10,3 +11,4 @@ public interface LoginService {
 
     public String logOutFromAccount(String key)throws LoginException;
 }
+

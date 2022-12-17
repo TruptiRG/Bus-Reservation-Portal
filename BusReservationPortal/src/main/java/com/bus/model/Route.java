@@ -1,5 +1,6 @@
 package com.bus.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -27,7 +28,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
-@EqualsAndHashCode
 public class Route {
 
 	@Id
@@ -39,11 +39,7 @@ public class Route {
 	private String routeTo;
 	
 	private Integer distance;
-	
-	@OneToMany(cascade = CascadeType.ALL)
 	@JsonIgnore
-	private Set<Bus> busList=new HashSet<>();
-	
-	
-	
+	@OneToMany(cascade = CascadeType.ALL,mappedBy = "route")
+	private List<Bus> busList;
 }

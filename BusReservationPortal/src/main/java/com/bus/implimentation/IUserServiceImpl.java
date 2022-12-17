@@ -28,23 +28,23 @@ public class IUserServiceImpl implements IUserService {
         return userRepo.save(user1);
     }
 
-    @Override
-    public User updateUser(User user, String key) throws UserException {
-        return null;
-    }
-
-    @Override
-    public User deleteUser(Integer userId, String key) throws UserException {
-        return null;
-    }
-
-    @Override
-    public User viewUser(Integer userId, String key) throws UserException {
-        return null;
-    }
-
-    @Override
-    public List<User> viewAllUsers(String key) throws UserException {
-        return null;
-    }
+//    @Override
+//    public User updateUser(User user, String key) throws UserException {
+//        return null;
+//    }
+//
+//    @Override
+//    public User deleteUser(Integer userId, String key) throws UserException {
+//        return null;
+//    }
+//
+//    @Override
+//    public User viewUser(Integer userId, String key) throws UserException {
+//        return null;
+//    }
+//
+//    @Override
+//    public List<User> viewAllUsers(String key) throws UserException {
+//        return null;
+//    }
 }

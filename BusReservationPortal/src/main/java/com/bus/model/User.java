@@ -1,3 +1,4 @@
+
 package com.bus.model;
 
 import javax.persistence.Entity;
