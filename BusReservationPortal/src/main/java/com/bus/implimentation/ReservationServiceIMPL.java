@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,67 +26,67 @@ public class ReservationServiceIMPL implements ReservationService{
 
 	@Override
 	public Reservation addReservation(Reservation reservation) throws ReservationException {
-		// TODO Auto-generated method stub
-				
+						
 		Reservation addReservation = rRepo.save(reservation); 
 		return addReservation;
 	}
 
-//	@Override
-//	public Reservation updateReservation(Reservation reservation) throws ReservationException {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public Reservation deleteReservation(Integer reservationId) throws ReservationException {
-//		// TODO Auto-generated method stub
-//		Optional<Reservation> opt = Optional.of(rRepo.findByReservationId(reservationId));
-//		if(opt.isPresent()) {
-//			Reservation existingResevation = opt.get();
-//			rRepo.delete(existingResevation);
-//			return existingResevation;
-//		}
-//		else {
-//			throw new ReservationException("Does not exist with ReservationId : "+reservationId);
-//		}
-//	}
-//
-//	@Override
-//	public Reservation viewReservation(Integer reservationId) throws ReservationException {
-//		// TODO Auto-generated method stub
-//		Optional<Reservation> opt = Optional.of(rRepo.findByReservationId(reservationId));
-//		if(opt.isPresent()) {
-//			Reservation reservation = opt.get();
-//			return reservation;
-//		}
-//		else {
-//			throw new ReservationException("Not Found");
-//		}
-////		return rRepo.findByReservationId(reservationId).orElseThrow(()-> new ReservationException("Not Found"));
-//	}
-//
-//	@Override
-//	public List<Reservation> viewAllReservation() throws ReservationException {
-//		// TODO Auto-generated method stub
-//		List<Reservation> resevations = rRepo.findAll();
-//		if(resevations.size()==0) {
-//			throw new ReservationException("Not Found");
-//		}else
-//			return resevations;
-//		
-//	}
+	@Override
+	public Reservation updateReservation(Reservation reservation) throws ReservationException {
+		Optional<Reservation> opt = rRepo.findById(reservation.getReservationId());
+		if(opt.isPresent()) {
+			Reservation updateReservation =rRepo.save(reservation);
+			return updateReservation;
+		}else {
+			throw new ReservationException("Invalid details");
+		}
+	}
+
+	@Override
+	public Reservation deleteReservation(Integer reservationId) throws ReservationException {
+		Optional<Reservation> opt = rRepo.findById(reservationId);
+		if(opt.isPresent()) {
+			Reservation existingResevation = opt.get();
+			rRepo.delete(existingResevation);
+			return existingResevation;
+		}
+		else {
+			throw new ReservationException("Does not exist with ReservationId : "+reservationId);
+		}
+	}
+
+	@Override
+	public Reservation viewReservation(Integer reservationId) throws ReservationException {
+		Optional<Reservation> opt = rRepo.findById(reservationId);
+		if(opt.isPresent()) {
+			Reservation resevation = opt.get();
+			return resevation;
+		}else {
+			throw new ReservationException("Not Found");
+		}
+	}
+
+	@Override
+	public List<Reservation> viewAllReservation() throws ReservationException {
+		List<Reservation> resevations = rRepo.findAll();
+		if(resevations.size()==0) {
+			throw new ReservationException("Not Found");
+		}else
+			return resevations;
+		
+	}
 
 //	@Override
 //	public List<Reservation> getAllReservation(LocalDate date) throws ReservationException {
-//		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
 //		List<Reservation> resevations = rRepo.finfByLocalDate(date);
 //		if(resevations.size()==0) {
 //			throw new ReservationException("Not Found");
 //		}else {
 //			return resevations;
 //		}
-//		
+//		return null;
+		
 //	}
 
 	
