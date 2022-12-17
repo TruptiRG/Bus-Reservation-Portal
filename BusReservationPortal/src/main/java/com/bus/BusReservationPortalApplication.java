@@ -8,6 +8,7 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 @SpringBootApplication
 public class BusReservationPortalApplication {
+
 	public static void main(String[] args) {
 		SpringApplication.run(BusReservationPortalApplication.class, args);
 	}

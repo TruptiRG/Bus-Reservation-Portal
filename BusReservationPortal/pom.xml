@@ -8,10 +8,10 @@
 		<version>2.7.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.masai</groupId>
-	<artifactId>BusReservationPortal</artifactId>
+	<groupId>com.bus</groupId>
+	<artifactId>BusReservationPortals</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>BusReservationPortal</name>
+	<name>BusReservationPortals</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
@@ -41,13 +41,12 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		
-				<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
-		    <groupId>org.projectlombok</groupId>
-		    <artifactId>lombok</artifactId>
-		    <scope>provided</scope>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
 		</dependency>
+<<<<<<< HEAD
 	
 				<!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
 		<dependency>
@@ -56,12 +55,23 @@
 		    <version>1.6.13</version>
 		</dependency>
 			
+=======
+
+>>>>>>> c4617b6ed8acc37a889649209520783e6544f81a
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 		
+=======
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.13</version>
+		</dependency>
+>>>>>>> c4617b6ed8acc37a889649209520783e6544f81a
 	</dependencies>
 
 	<build>
@@ -69,6 +79,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

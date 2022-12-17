@@ -1,6 +1,6 @@
 package com.bus.exception;
 
-public class UserException extends Exception {
+public class UserException extends Exception{
 
     public UserException() {
     }
