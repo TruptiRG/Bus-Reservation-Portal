@@ -66,23 +66,23 @@
 
 # Overview of Our work
 
-## **Admin Module** 
+- ## **Admin Module** 
 
 <img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/admin_login.png" />
 
-## **User Module**
+- ## **User Module**
 <img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/user.png" />
 
-## **Bus Module** 
+- ## **Bus Module** 
 <img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/bus.png" />
 
-## **Route Module**
+- ## **Route Module**
 <img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/route.png" />
 
-## **Reservation Module**
+- ## **Reservation Module**
 <img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/reservation.png" />
 
-## **Feedback Module**
+- ## **Feedback Module**
 <img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/feedback_C.png" />
 
 # Contributor
