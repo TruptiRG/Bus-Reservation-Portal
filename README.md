@@ -8,7 +8,7 @@
 -  T-SNAP Bus Reservation Portal (bus reservation system) is an java application designed to provide customers with a fine user experience for booking bus reseravtion online. It stores customers' personal data records, scheduled routes, and other information.
 - It has 6 modules Admin, User, Reservation, Bus, Route and Feedback.
 
-<!-- # 👉 [Click here]() to go through detail explanation of this application  -->
+
  <p align="center"> 
   <img style="width:38%;" src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/t-snap-bus-reservation-portal-logo.png" />
 </p>
@@ -68,22 +68,22 @@
 
 ## **Admin Module** 
 
-
+<img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/admin_login.png" />
 
 ## **User Module**
-
+<img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/user.png" />
 
 ## **Bus Module** 
-
+<img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/bus.png" />
 
 ## **Route Module**
-
+<img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/route.png" />
 
 ## **Reservation Module**
-
+<img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/reservation.png" />
 
 ## **Feedback Module**
-
+<img src="https://github.com/TruptiRG/friendly-roll-9850/blob/main/images/feedback_C.png" />
 
 # Contributor
 
