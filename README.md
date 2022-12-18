@@ -95,10 +95,10 @@ Worked on Reservation module
 > Github: [nikhilkharat](https://github.com/nikhilkharat)
 Worked on Admin and User module
 #### Shubham Patil 
->Github: [spp96]((https://github.com/spp96))
+>Github: [spp96](https://github.com/spp96)
 Worked on Bus module
 #### Pankaj Rai
->Github:[Jhala26](https://github.com/Pankaj-78278))
+>Github:[Pankaj-78278](https://github.com/Pankaj-78278)
 Worked on Feedback Module
 #### Ashish Yadav
 >Github: [Ashish898374](https://github.com/Ashish898374)
